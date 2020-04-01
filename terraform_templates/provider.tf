@@ -18,6 +18,6 @@ terraform {
     storage_account_name = "sa5d38"
     container_name       = "terraform"
     key                  = "terraform.tfstate"
-    access_key           = "bXCrGBgXvHbz27bjOy8YpsQdhfskFdb0LEn+PdkbIm93wchOi07130DvwXJHg3peu4Ll6RE1s6FV7cOWm4aZMA=="
+    access_key           = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
   }
 }
