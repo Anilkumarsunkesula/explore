@@ -1,0 +1,14 @@
+{{- if .Values.isConfigMap }}
+{{- if .Values.microServices }}
+{{- range $key, $val := .Values.microServices }} 
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ $key }}
+data:
+  testkey: testvalue
+
+---
+{{- end }}
+{{- end }}
+{{- end }}

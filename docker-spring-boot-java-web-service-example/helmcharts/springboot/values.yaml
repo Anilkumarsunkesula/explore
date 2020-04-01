@@ -1,0 +1,35 @@
+isSvc: true
+isIngress: true
+isConfigMap: true
+isDeploy: true
+isResourceLimits: true
+isHpa: true
+
+service:
+  type: ClusterIP
+  protocol: TCP
+  protocolName: tcp
+nodeSelector: 
+  nodetype: services
+
+replicaCount: 1  
+
+image:
+  tag: 13
+  pullPolicy: Always
+  secret: acrcreds
+
+microServices:
+  springboot:
+    containerPort: 8080
+    svcPort: 8080
+    image: containerregistrycd96.azurecr.io/springboot
+    needsIngress: true
+    needsHpa: true
+    maxReplicas: 3
+    minReplicas: 1
+    needsResourceLimits: true
+    cpuLimit: 500m
+    memoryLimit: 1000Mi
+    cpuRequest: 125m
+    memoryRequest: 300Mi
