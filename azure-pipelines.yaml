@@ -37,4 +37,4 @@ steps:
     command: 'package'
     chartPath: 'docker-spring-boot-java-web-service-example/helmcharts/springboot'
     save: false
-    arguments: '--set image.tag=$(Build.BuildId)'
+    arguments: '--set acr.repository=containerregistrycd96.azurecr.io/docker-springboot --set image.tag=$(Build.BuildId)'
