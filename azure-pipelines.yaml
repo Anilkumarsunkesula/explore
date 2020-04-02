@@ -13,7 +13,7 @@ steps:
 - task: Maven@3
   displayName: maven-package
   inputs:
-    mavenPomFile: '**/pom.xml'
+    mavenPomFile: 'docker-spring-boot-java-web-service-example/pom.xml'
     publishJUnitResults: false
     javaHomeOption: 'JDKVersion'
     mavenVersionOption: 'Default'
@@ -35,6 +35,6 @@ steps:
   displayName: helm-package
   inputs:
     command: 'package'
-    chartPath: '**/helmcharts/springboot'
+    chartPath: 'docker-spring-boot-java-web-service-example/helmcharts/springboot'
     save: false
     arguments: '--set image.tag=$(Build.BuildId)'
