@@ -14,6 +14,9 @@ nodeSelector:
 
 replicaCount: 1  
 
+acr:
+  repository: containerregistrycd96.azurecr.io/docker-springboot
+
 image:
   tag: 13
   pullPolicy: Always
@@ -23,7 +26,6 @@ microServices:
   springboot:
     containerPort: 8080
     svcPort: 8080
-    image: containerregistrycd96.azurecr.io/springboot
     needsIngress: true
     needsHpa: true
     maxReplicas: 3

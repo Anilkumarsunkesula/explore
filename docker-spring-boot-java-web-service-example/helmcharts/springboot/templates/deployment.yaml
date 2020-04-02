@@ -33,7 +33,7 @@ spec:
         - envFrom:
           - configMapRef:
               name: {{ $key }}
-          image: {{ $value.image }}:{{ $.Values.image.tag }}
+          image: {{ $.Values.acr.repository }}:{{ $.Values.image.tag }}
           imagePullPolicy: {{ $.Values.image.pullPolicy }}
           {{- if  $.Values.isResourceLimits }}
           {{- if  $value.needsResourceLimits }}
