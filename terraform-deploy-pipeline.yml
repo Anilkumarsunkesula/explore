@@ -14,7 +14,7 @@ pool:
 variables:
   # Container registry service connection established during pipeline creation
  
-  TemplatePath: '$(Build.SourcesDirectory)/tfaks'
+  TemplatePath: 'terraform_templates'
   
 steps:
 - task: Terraform@2
