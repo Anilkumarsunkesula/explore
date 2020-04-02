@@ -1,0 +1,5 @@
+trigger:
+- springboot
+
+pool:
+  vmImage: 'ubuntu-latest'
