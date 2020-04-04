@@ -9,10 +9,8 @@ trigger:
 
 pool:
   vmImage: 'vs2017-win2016'
-  # vmImage: 'ubuntu-latest'
 
 variables:
-  # Container registry service connection established during pipeline creation
  
   TemplatePath: 'terraform_templates'
   
