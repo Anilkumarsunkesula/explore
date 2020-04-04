@@ -23,7 +23,7 @@ steps:
 - task: Docker@2
   displayName: docker-buildnpush
   inputs:
-    containerRegistry: 'acrconnection'
+    containerRegistry: 'acrsvcconnection'
     repository: 'docker-springboot'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
@@ -37,4 +37,4 @@ steps:
     command: 'package'
     chartPath: 'docker-spring-boot-java-web-service-example/helmcharts/springboot'
     save: false
-    arguments: '--set acr.repository=containerregistrycd96.azurecr.io/docker-springboot --set image.tag=$(Build.BuildId)'
+    arguments: '--set acr.repository=containerregistry672a.azurecr.io/docker-springboot --set image.tag=$(Build.BuildId)'
