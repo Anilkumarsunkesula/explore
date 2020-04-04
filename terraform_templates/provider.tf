@@ -16,8 +16,7 @@ provider "azuread" {
 terraform {
   backend "azurerm" {
     storage_account_name = "sa5d38"
-    container_name       = "terraform"
+    container_name       = "terraformdeploy"
     key                  = "terraform.tfstate"
-    access_key           = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
   }
 }
