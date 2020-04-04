@@ -38,3 +38,9 @@ steps:
     chartPath: 'docker-spring-boot-java-web-service-example/helmcharts/springboot'
     save: false
     arguments: '--set acr.repository=containerregistry672a.azurecr.io/docker-springboot --set image.tag=$(Build.BuildId)'
+- task: PublishBuildArtifacts@1
+  displayName: publish-artifacts
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
