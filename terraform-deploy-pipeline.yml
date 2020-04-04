@@ -5,7 +5,7 @@
 # https://aka.ms/yaml
 
 trigger:
-- master
+- terraform
 
 pool:
   vmImage: 'vs2017-win2016'
