@@ -12,7 +12,7 @@ public class HelloController {
 	
 	@RequestMapping(value = "/test", method = RequestMethod.GET)
 	public String test() {
-		return "World fights corona" + new Date();
+		return "Stay home stay safe " + new Date();
 	}
 
 }
